@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import ttk
 
 prolog = Prolog()
-prolog.consult("sistem_cuaca_gui.pl")  # Pastikan path benar
+prolog.consult("sistem_cuaca_gui.pl")  
 
 cuaca_list = list()
 gejala_dict = dict()
@@ -15,7 +15,7 @@ current_gejala = ""
 
 def mulai_diagnosa():
     global cuaca_list, gejala_dict, index_cuaca, index_gejala
-    prolog.retractall("gejala_pos(_)")  # Bersihkan sebelumnya
+    prolog.retractall("gejala_pos(_)")  
     prolog.retractall("gejala_neg(_)")
 
     start_btn.configure(state=tk.DISABLED)
